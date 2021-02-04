@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html id="mem-met">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Metroid Memory Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/nintendo.css">
+	<script type="text/javascript" rel="stylesheet" src="../jQuery/jquery-3.3.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ultra&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js"></script>
+</head>
+<body lang="en" id="met-memory">
+	<section id="game-rules">
+		<p class="explanation">Hi and welcome to my Metroid themed memory game.<br>The rules are simple, you have a certain amount of time to find all the matching pairs of pictures in the grid before the time runs out..<br>Have Fun! You can challenge yourself with different difficulty settings<br>You just need to choose difficulty level first then press the button below.</p>
+		<button type="button" class="start-game" onclick="init()">Start Game</button>
+
+	    <p class="explanation">Please select the difficulty level. Hard gives you 1 Minute to complete the game, Medium gives you 1 Minute 30 seconds, and Easy gets you 2 Minutes.</p>
+        <button type="button" class="start-game" value="1" onclick="difficulty(this.value)">Hard</button>
+        <button type="button" class="start-game" value="1.5" onclick="difficulty(this.value)">Medium</button>
+        <button type="button" class="start-game" value="2" onclick="difficulty(this.value)">Easy</button>
+    </section>
+    <div class="end-game">
+    	<p class="explanation">You completed the game!!<br>Congratulations!! You are a true bounty hunter hunter</p>
+    	<button type="button" class="start-game" onclick="reset()">Start Game Again</button>
+    </div>
+    <div class="end-game">
+    	<p class="explanation">Tough Luck Hunter<br>Try Again</p>
+    	<button type="button" class="start-game" onclick="reset()">Start Game Again</button>
+    </div>
+	<div class="main-met-container">
+		<div class="game-popups">
+			<h4 id="msg-text"></h4>
+		</div>
+	<div id="time-wrap">	
+		<span id=time></span>
+	</div>	
+
+		<h1 id="memory-heading">super metroid memory game</h1>
+    <section class="wrapper-met-game">
+			<div class="img-container">
+				<img class="mem-game-pic box-1 front-face" src="">
+                <img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-2 front-face" src="">
+                <img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-3 front-face" src="">
+                <img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-4 front-face" src="">
+                <img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-5 front-face" src="">
+                <img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-6 front-face" src="">
+                <img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-7 front-face" src="">
+                <img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-8 front-face" src="">
+                <img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-9 front-face" src="">
+                <img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-10 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-11 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-12 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-13 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-14 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-15 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-16 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-17 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-18 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-19 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+			<div class="img-container">
+				<img class="mem-game-pic box-20 front-face" src="">
+				<img class="mem-game-pic back-face" src="https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533" alt="Picture of an alien from the Metroid game series">
+			</div>
+		</section>
+	</div>
+    <script type="text/javascript" rel="stylesheet" src="assets/js/metroid-memory.js"></script>
+</body>
+</html>
+<!-- javier7high youtube for brinstar green tune MediaFire -->

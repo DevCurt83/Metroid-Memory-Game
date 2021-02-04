@@ -1,0 +1,575 @@
+* {
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+/* CSS Normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+body {
+  background-image: url(http://images6.fanpop.com/image/photos/36000000/Nintendo-Characters-video-games-universe-36001222-1024-768.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: repeat;
+}
+h3 {
+  color: white;
+  font-size: 39px;
+  font-family: 'Changa', sans-serif;
+}
+h3 .stats {
+  font-size: 39px;
+  font-family: 'Changa', sans-serif;
+
+}
+h2 {
+  font-family: 'Changa', sans-serif;
+  color: cornflowerblue;
+    text-align: center;
+}
+section {
+    order: 2;
+}
+.side-div h2 {
+  font-size: 32px;
+}
+
+.paragraph {
+    padding: 3%;
+    line-height: 1.5;
+}
+/*
+site fonts- src found in n-intendo.html
+    font-family: 'Boogaloo', cursive;
+
+    font-family: 'Changa', sans-serif;
+
+    font-family: 'Russo One', sans-serif;
+
+*/
+.img-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 49vw;
+    width: 36%;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+}
+.button-img {
+    flex-basis: 50px;
+    height: 57%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+img {
+  width: 79%;
+    height: 74px;
+    border: solid 2px #333;
+}
+.main h1 {
+  margin: 0 auto;
+  color: red;
+  text-align: center;
+  font-size: 9vw;
+  border: solid red 8px;
+  padding: 10px;
+  border-radius: 14px;
+  width: 80%;
+  background: white;
+    order: 1;
+}
+.picture-caption  {
+  font-family: 'Russo One', sans-serif;
+}
+.side-div {
+  background-color: white;
+  width: 26%;
+  float: left;
+  margin-top: 2%;
+  border: solid red 2px;
+  border-radius: 5px;
+}
+.side-div img {
+  opacity: 0.9;
+  margin: 12px;
+}
+/*below WAS floated*/
+.main {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+  font-family: 'Boogaloo', cursive;
+  width: 68%;
+  margin: 0 auto;
+  background-color: barbiepink; /* ;) */
+  opacity: 0.9;
+  padding: 6px;
+  border: solid 2px red;
+  border-radius: 10px;
+  font-size: large;
+    align-items: center;
+    height: 100%;
+}
+
+.header {
+  width: 40%;
+  opacity: 0.9;
+  align-self: flex-start;
+}
+.wrapper {
+  width: 90%;
+  height: auto;
+
+}
+
+
+/*Most Of The Samus CSS is here-------------------------------------*/
+
+.top {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+h1 {
+  font-family: 'Patua One', cursive;
+  font-size: 5vw;
+  background: -webkit-linear-gradient(rgb(185, 181, 118), rgb(244, 251, 185));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 9px;
+}
+.wrapper-samus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 99%;
+    margin: 0 auto;
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+#samus {
+  background-image: url("http://assets2.ignimgs.com/2013/08/09/metroidjpg-e938fe_1280w.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+.container {
+   background-color: #c8c8a247;
+   border-radius: 1px;
+   width: 50%;
+   height: 36%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+   opacity: 0;
+   position: absolute;
+   top: 50%;
+}
+.nav-box {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  border: solid 3px transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition:background-color .4s ease-out;
+  -o-transition:background-color .4s ease-out;
+  transition:background-color .4s ease-out;
+}
+.nav-box:hover {
+
+}
+.pic-title {
+  color: black;
+  font-family: 'Righteous', cursive;
+  font-size: 2vw;
+  margin: 12.083px;
+}
+
+
+.stats {
+ border: solid green 3px;
+ border-radius: 8px;
+ margin: 0 auto;
+ background-color: rgba(253, 170, 88, 0.62);
+ width: 49%;
+ padding: 14px;
+ font-family: 'Russo One', sans-serif;
+}
+
+.start-sen {
+    font-family: 'Boogaloo', cursive;
+    font-size: 33px;
+}
+iframe {
+  width: inherit;
+}
+.samus-h2 {
+  font-size: 39px;
+  text-align: center;
+  color: black;
+  font-family: 'Boogaloo', cursive;
+}
+.morph {
+  width: 19%;
+  height: 160px;
+  position: absolute;
+  left: 51%;
+  top: 162%;
+}
+.home-button {
+  background-image: url("https://vignette.wikia.nocookie.net/fantendo/images/b/b0/Mario_Jump_NSMBU.png/revision/latest?cb=20130526040943");
+  width: 9%;
+  height: 13%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid #FF0000 2px;
+}
+
+.home-button a:hover {
+  color: red;
+}
+.home-button a {
+  text-decoration: none;
+}
+.home-button a:visited {
+  color: white;
+}
+.wrapper-met-game {
+  width:33%;
+  height: 70%;
+  margin: 2% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#met-memory {
+  min-height: 100vh;
+  width: 100vw;
+  /*border: 4.3px solid blue;*/
+  background-image: url("http://www.goombastomp.com/wp-content/uploads/2016/07/Samus_model6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#mem-met {
+  min-height: 100vh;
+  /*to remove highlighted div on dble click*/
+  -webkit-tap-highlight-color:transparent;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+.img-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  height: 85px;
+  background-image: url("https://vignette.wikia.nocookie.net/villains/images/6/6d/Samus_returns_metroid_larva.png/revision/latest?cb=20181102030533");
+  background-size: 100% 100%;
+  border: solid 1px rgba(179, 202, 173, 0.16);
+  border-radius: 5px; /*can increase this after startup maybe??*/
+  position: relative;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+.img-container:active {
+  -webkit-transform: scale(0.97);
+      -ms-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  -o-transition: transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+.img-container.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.front-face {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg); /* both images back faces are hidden, there is nothing in the other side. So now we have to turn the .front-face 180 degrees: */
+}
+.img-container:hover {
+  cursor: crosshair;
+}
+.main-met-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.front-face,.back-face {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+#memory-heading {
+  font-family: 'Faster One', cursive;
+  font-size: 50px;
+  text-transform: uppercase;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, yellow), color-stop(0.15, red), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, yellow),color-stop(0.75, red), color-stop(0.9, yellow), color-stop(1, red) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  /* -moz-transform: rotate(5deg); */
+}
+.mem-game-pic {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.met-anchor {
+  text-decoration: none;
+  width: 100%;
+  outline: none;
+}
+/* maybe a accesibility issue if this is set to none */
+:link:focus, :visited:focus {
+  outline: transparent;
+}
+div .img-container {
+  outline-style:none;
+}
+/*to remove highlighted div on dbl click*/
+.mem-game-pic {
+  outline-style: none;
+}
+.game-popups {
+  background-color: rgb(162, 191, 219);
+  border-radius: 3px;
+  width: auto;
+  height:40px;
+  order: 2;
+  top: 22%;
+  text-align: center;
+  line-height: 0px;
+  padding: 0 1% 0 1%;
+  visibility: hidden;
+  display: flex;
+  border: solid 2px slateblue;
+}
+#msg-text {
+  color: #2b1455;
+  font-family: 'Ultra', serif;
+  font-weight: lighter;
+}
+#time {
+  font-family: 'Ultra', serif;
+  font-size: 30px;
+  color: rgba(102, 238, 56, 0.85);
+}
+#time-wrap {
+  order: 2;
+  display: inline-block;
+  min-height: 41px;
+}
+#game-rules {
+  background-color: rgba(203, 218, 235, 0.75);
+  font-family: 'Ultra', serif;
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  padding: 3%;
+  z-index: 1;
+}
+.end-game {
+  background-color: rgba(203, 218, 235, 0.75);
+  font-family: 'Ultra', serif;
+  width: 58%;
+  display: none;
+  flex-direction: column;
+  border-radius: 4px;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  padding: 3%;
+  z-index: 1;
+  text-align: center;
+}
+.start-game {
+  flex: 1 2 50%;
+  width: 50%;
+  align-self: center;
+  transition: 1s; 
+  -webkit-transition: background-color 1s; /* Safari */
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  outline-color: green;
+  outline-width: 3px;
+}
+.start-game:hover {
+  background-color: cornflowerblue; 
+}
+
+/*------------------------------------
+-------CSS for Link's Page*/
+#Link {
+  background-image: url(https://cdn.inquisitr.com/wp-content/uploads/2014/06/no-black-link-14616.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 12px;
+}
+.Link-Body {
+  width: -moz-available;
+  height: auto;
+  opacity: 0.8;
+  background-color: #7bed64;
+  border: solid #f0d01d 3px;
+  border-radius: 11px;
+}
+.hr {
+
+    overflow: visible; /* For IE */ height: 30px;
+    border-style: solid;
+    border-color: green;
+    border-width: 1px 0 0 0;
+      border-radius: 20px;
+}
+.hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: green;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+.Link-Body h1 {
+  font-size: 65px;
+  color: #272112;
+  padding-left: 0.5em;
+
+
+}
+.article {
+   font-family: 'Boogaloo', cursive;
+   padding: 2em;
+   line-height: 154%;
+   width: 70%;
+   text-align: left;
+   font-size: 114%;
+}
+.Link-Body h3 {
+  font-family: 'Russo One', sans-serif;
+  color: goldenrod;
+  background-color: black;
+  width: -moz-fit-content;
+  border: solid goldenrod 3px;
+  border-radius: 12px;
+  text-align: center;
+  margin-left: 0.5em;
+  padding: 4px;
+}
+.link-img {
+  width: 35%;
+  height: auto;
+}
+.nav-top {
+  display: block;
+  background-color: greenyellow;
+}
+li {
+list-style-type: none;
+display: inline;
+margin-right: 20px;
+font-size: 25px;
+color: blue;
+}
+.nav-top a:link {
+color: goldenrod;
+text-decoration: none;
+}
+.nav-top a:hover {
+  color:black;
+  background-color: ;
+  border: solid cornflowerblue 1px;
+  padding: 4px;
+}
+.nav-top a {
+  color: black;
+}
+form {
+  display: flex;
+  background-color: bisque;
+  border-style: solid;
+  width: 20%;
+
+}
+.form {
+  display: block;
+}
+
+@media all and (max-width:500px) {
+    .main {
+        width: 90%;
+    }
+    #memory-heading {
+      font-size: 2em;
+    }
+    #game-rules {
+      font-size: 11px;
+      font-weight: lighter;
+      width: 75%;
+      left: 14%;
+    }
+    .end-game {
+      font-size: 11px;
+      font-weight: lighter;
+    }
+    .wrapper-met-game {
+      width: 75%;
+    }
+    /* flexbox properties will need to adjusted to do the below */
+    /* .pic-title {
+      font-size: 5.5vw;
+    } */
+}
